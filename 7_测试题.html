@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">随机生成一个验证码</button>
+    <p id="p"></p>
+    <script>
+        /* 
+   做一个产生随机验证码的效果，
+        产生四位验证码，
+        验证码由
+        数字，小写字母，大写字母组成；
+        每点击一次，就会产生一个新的验证码；
+        并且保证验证码中的字符是不重复的；
+
+        4位码
+        数字，小写字母，大写字母组成
+        字符是不重复的
+         */
+         let str='1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM';
+        //字符串
+         let arr=[];
+         //声明arr为空数组
+         btn.onclick=function(){
+            //给按钮添加一个点击事件
+             arr.length=0;
+
+             sum();
+             p.innerHTML=arr.join('');
+            }
+            function sum(){
+                if(arr.length>=4)return;
+                let s =str[Math.floor(Math.random()*str.length)];
+                if(!arr.includes(s))arr.push(s);
+                sum();
+            }
+    </script>
+</body>
+</html>

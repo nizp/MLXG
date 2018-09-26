@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+             获取1~100之间，所有即能被五整除，也能被三整除的数字，
+        相加的和
+        使用FOR循环处理的，只能获取8分，使用递归处理的，可以获取15分
+         */
+        //  function sum(num){
+        //      //调用函数
+            
+        //      if(num<1){return 0;
+        //         //如果num小于1，那么返回值为0
+        //      }
+        //      if(num%3==0&&num%5==0){
+        //          return num+sum(num-1)
+        //          //如果num能被3并且也能被5整除，那么返回值为整除数+整除事-1
+        //      }else{
+        //          return sum(num-1) 
+        //      }
+        //  }
+        //  let total=sum(100);
+        //  console.log(total)
+
+
+         function sum(num){
+             if(num<1){
+                 return 0;
+             }if(num%3==0&&num%5==0){
+                 return num+sum(num-1)
+             }else{
+                 return sum(num-1)
+             }
+         }
+         let total=sum(100)
+         console.log(total)
+    </script>
+</body>
+</html>
