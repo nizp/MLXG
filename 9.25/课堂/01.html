@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+            数据类型
+                简单类型
+                    number、boolean、string、null、undefined
+                引用类型
+                    object、symbol
+            数据类型检测的方法  
+                typeof  instanceof  constructor object.prototype.toString   Array.isArry()
+            描述基本数据类型和引用数据类型的区别
+                存储方式不一样
+                基本数据类型：存在栈中  赋值是赋值
+                引用数据类型：存在堆中  赋值是赋址
+            怎么样才可以把传递给函数的参数值接收到
+                读形参，如果没有传实参我undefined
+                通过arguments获取
+            JS中设置定时器的两种方法：
+                炸一次  setTimeout(function(a){},1000,a)
+                循环炸  setInterval（function（a）{},1000,a）
+            页面中有这样一个DIV标签<div id=’div1’ class=’box’></div> ，想获取到这个元素可以用哪些方法(至少两种办法,可以不兼容)：
+                document.getElementById('div1');
+                document.querySelector('#div1');
+                document.querySelectorAll('#div1')[0];
+                用class
+                document.getElementByClassName('box')
+                document.querySelector('.box')
+                document.querySelectorAll('.box')[0];
+            动态创建一个p标签，并且把其添加到body的末尾位置
+                var dom = document.creatElement('p')
+             获取上一个哥哥节点：
+                target.previousSibling()
+            字符串截取的三种方法
+                substring
+                substr
+                slice
+            把字符串中某个字符进行替换的方法
+                splice.join replace
+            在数组的后面追加一项(至少两种办法)：
+                push    splice
+            删除数组的最后一项(至少两种办法)
+                pop splice
+            写出循环遍历数组中每一项的方法(至少两种)
+                for循环 forEach while循环   for in  setInterval
+            数组从小到大排序
+                sort    冒泡排序
+            实现找到第n项到第m项(包括第n项和第m项)的内容，返回一个新的数组
+                slice
+            获取[n~m](包含n和m)之间的随机整数
+                Math.round(Math.random()*(n-m)+m)
+            获取一组数字中的最大值和最小值
+                math.max    math.min
+            写一个sum方法来实现任意数求和功能（说明：任意数求和指的是，在方法执行的时候，不管传多少个数字，都可以进行累加求和；
+            对于传递进来的是非有效数字要进行屏蔽；最后把求出的和返回到函数的外面；
+                function sum(){
+                    let num = 0;
+                    for(let i=0;i<arguments.length;i++)
+
+                }
+                let s=sum()
+            获取1~100之间，所有即能被五整除，也能被三整除的数字，相加的和使用FOR循环处理的，只能获取8分，使用递归处理的，可以获取15分
+
+         */
+        //  let p =document.createElement('p');
+        //  for(let i=0;i<1000;i++){
+        //      console.time('计时器');
+        //      body.innerHTML += '<p>pppppp</p>';
+        //  }
+        //  console.timeEnd('计时器')
+    </script>
+</body>
+</html>
